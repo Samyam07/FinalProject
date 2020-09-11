@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width", initial-scale=1.0>
-	<title>Contact Us</title>
+	<title>Audition</title>
 
 	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Nunito+Sans:wght@900&display=swap" rel="stylesheet"/>
 
-	<link rel="stylesheet" type="text/css" href="css/contact.css"/>
+	<link rel="stylesheet" type="text/css" href="css/audition.css"/>
 	<script type="text/javascript" src="js/contact.js"></script>
 
 	<link href="https://fonts.googleapis.com/css2?family=Neuton:wght@300&family=Slabo+27px&display=swap" rel="stylesheet">
@@ -32,52 +32,42 @@
 		</ul>
 	</nav>
 	</div>
-	<a class="cta" href="#">
+	<a class="cta" href="contact.html" target="_blank">
 		<button><h2>Contact</h2></button>
 	</a>
 </div>
 
 <div class="body-content">
 	<div class="box">
-		<h3>Contact us</h3>
+		<h3>AUDITION</h3>
 	</div>
 
 	<div class="row">
 		<div class="col100">
-			<h5>Customer INQUIRIES</h5>
+			<h5>Join the Jinhit Family</h5>
 		</div>
 	</div>
 
 	<div class="row">
-		<div class="col50">
+		<div class="col100">
+			<h4>Jinhit Entertainment is recruiting talented people in various fields such as idols, producers, lyrics, and composition. Grab this opportunity to be a part of our company.
+			</h4>
+		</div>
+	</div>
+	
+	<p><br/><br/>&nbsp;&nbsp;&nbsp;Please fill out the application form to apply for the audition.</p>
+
+	<div class="row">
+		<div class="col100">
 			<div class="box1">
-			<p><b>Terms and Conditions</b><br/>Jinhit respects your personal information and the “Act on Promotion of Information and Communications Network Utilization and Information Protection, Etc.”<br/><br/>
-			The Company will inform you of the purpose of using the personal information you provide and how it is used and of the measures taken to protect your personal information through the privacy policy. The Company shall notify you of any revision of the privacy policy through announcements in the website.<br/><br/>
-
-			The Company collects the following personal information i.e name and email to facilitate including customer consultation in order to respond to service inquiries. However, inquiries about the personal life of the idols is banned. If we get such messages, emails will be blocked from the person.  <br/><br/>
-
-			By submitting the inquiry, you'll also be signed up to our notices and newsletters so, Keep in check for the official schedule notices of our idols and events or fansigns.<br/><br/>
-
-			In case of unauthorized use of your personal information, the company shall immediately destroy the personal information.<br/><br/>
-
-			Please follow the guidelines of our company. Thank you!!<br/><br/>
-		</p>
-	</div>
-		</div>
-	</div>
-
-
-	<div class="row">
-		<div class="col50">
-			<div class="box2">
 <div id="signUpError" style="color:red;"> 
 </div>
 	<form action="#" method="POST" name="signup" enctype="multipart/form-data" onsubmit="return validateSignup()">
 		<fieldset>
 			<legend>&nbsp;&nbsp;Inquiry</legend>
-			<table border=0 cellpadding="5" cellspacing="5" width="100%">
+			<table border=0 cellpadding="5" cellspacing="30" width="100%">
 				<tr>
-					<td><label>Full Name</label></td>
+					<td><label>Name</label></td>
 					<td><input type="Text" name="fullname" size="30" maxlength="50" placeholder="fullname" required="required" />
 					</td>
 				</tr>
@@ -85,19 +75,23 @@
 					<td><label>Email Address</label></td>
 					<td><input type="email" name="email" placeholder="you@domain.com" size="30" maxlength="50" required /> </td>
 				</tr>
+
 				<tr>
-					<td>Inquiry Type</td>
+					<td>Gender</td>
 					<td>
-						<input type="radio" name="inquiry" value="Business" checked="checked">Business
-						<input type="radio" name="inquiry" value="Advertisement"/>Advertisement
-						<input type="radio" name="inquiry" value="Music"/>Music
-						<input type="radio" name="inquiry" value="IR"/>IR
-						<input type="radio" name="inquiry" value="O"/>Other
+						<input type="radio" name="gender" value="M" checked="checked"> Male
+						&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="F"/> Female
+						&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="O"/> Others
 					</td>
 				</tr>
 
 				<tr>
-					<td>Country where you are from</td>
+					<td>DOB</td>
+					<td><input type="date" name="dob" placeholder="mm/dd/yyyy" required/>
+				</tr>
+
+				<tr>
+					<td>Nationality</td>
 					<td>
 						<select name="country" size="1" required>
 							<option value="">--Choose--</option>
@@ -110,13 +104,34 @@
 						</select>
 					</td>
 				</tr>
+
+
+				<tr>
+					<td>Position
+					</td>
+					<td>
+						<input type="checkbox" name="singer" value="singer" checked/> Singer
+						&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="dancer"/> Dancer
+						&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="rapper"/> Rapper
+						&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="producer"/> Producer
+					</td>
+				</tr>
 		
-			<tr>
-				<td>Message</td>
-				<td>
-					<textarea rows="13" cols="40" name="message" required></textarea>
-				</td>
-			</tr>
+				<tr>
+					<td>Photo</td>
+					<td>
+					<input type="file" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" name="photo" required/>
+					<!--whenever we write input type="file" we have to add enctype="....." in the form above-->
+					</td>
+				</tr>
+
+				<tr>
+					<td>Video</td>
+					<td>
+					<input type="file" accept=".MP4, .mp4, .m4a, .m4v, .f4v, .f4a, .m4b, .m4r, .f4b, .WEBM, .mov, .flv, .avi|video/*" name="video" required/>
+					</td>
+				</tr>
+
 				<tr>
 					<td>
 						<input type="submit" name="submit" value="Send"/>
@@ -125,8 +140,6 @@
 				</tr>
 			</table> 
 		</fieldset>
-		<br/>
-			<input type="checkbox" name="terms" value="Y" required/> You agree to the terms and conditions of the company.
 
 	</div>
 	</div>
@@ -135,7 +148,14 @@
 	</script>
 <noscript>
 Your browser doesn't support JavaScript!</noscript>
-
+<p>
+	<br/><br/>
+	<b>Audition Notes</b></p><br/><p>
+	1. Photoshop photos cannot be accepted.<br/>
+	2. Edited audio or video are not accepted.<br/>
+	3. The result is notified via email.<br/>
+	4. If there is no contact for more than 2 weeks, it can be considered as rejection.<br/>	
+</p>
 </div>
 
 
